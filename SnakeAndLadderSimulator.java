@@ -26,6 +26,11 @@ public class SnakeAndLadderSimulator {
 		case 2:
 			System.out.println("Player got the Ladder");
 			Player1Position += random;
+			// In case the Player position go above 100,the player stay in the same previous
+				// position till the player gets no that adds to 100.
+			if (Player1Position > 100) {
+				Player1Position -= random;
+			}
 			break;
 		case 3:
 			System.out.println("Oops! Player got the Snake");
@@ -33,6 +38,8 @@ public class SnakeAndLadderSimulator {
 			// In case the player position moves below 0, then the player restarts from 0
 			if (Player1Position < 0) {
 				Player1Position = 0;
+			} else {
+				Player1Position -=random;
 			}
 			break;
 		default:
