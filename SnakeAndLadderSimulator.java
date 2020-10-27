@@ -13,6 +13,7 @@ public class SnakeAndLadderSimulator {
 	public static void main(String args[]) {
 		//Variable
 		int Player1Position = 0;
+		int Winpoint = 100;
 		// Print Welcome Message
 		System.out.println("Welcome in Snake And Ladder Simulator Program");
 		int random = rollDice();
@@ -29,9 +30,16 @@ public class SnakeAndLadderSimulator {
 		case 3:
 			System.out.println("Oops! Player got the Snake");
 			Player1Position -= random;
+			// In case the player position moves below 0, then the player restarts from 0
+			if (Player1Position < 0) {
+				Player1Position = 0;
+			}
+			break;
 		default:
 			System.out.println("Something Wrong");
 
 		}
+		System.out.println("Plaer1 position is:" + Player1Position);
+		System.out.println();
 	}
 }
