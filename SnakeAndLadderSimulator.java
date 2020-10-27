@@ -33,6 +33,8 @@ public class SnakeAndLadderSimulator {
 			// In case the player position moves below 0, then the player restarts from 0
 			if (Player1Position < 0) {
 				Player1Position = 0;
+			} else{
+				Player1Position -= random;
 			}
 			break;
 		default:
