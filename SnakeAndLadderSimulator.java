@@ -16,6 +16,7 @@ public class SnakeAndLadderSimulator {
 		int Winpoint = 100;
 		// Print Welcome Message
 		System.out.println("Welcome in Snake And Ladder Simulator Program");
+		while(Player1Position < 100){
 		int random = rollDice();
 		int option = checkOption();
 		// Use Switch case for option
@@ -49,4 +50,5 @@ public class SnakeAndLadderSimulator {
 		System.out.println("Plaer1 position is:" + Player1Position);
 		System.out.println();
 	}
+    }
 }
